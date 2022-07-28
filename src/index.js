@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Toggle from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Toggle slides={[{title:"title1",text:"text1"},{title:"title2",text:"text2"},{title:"title3",text:"text3"},{title:"title4",text:"text4"}]}/>
   </React.StrictMode>
 );
 

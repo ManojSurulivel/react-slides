@@ -1,31 +1,17 @@
-import React,{useState} from 'react';
-import './App.css'
+import React from "react";
+import Slides from "./Slides";
 
-function Slides({slides}) {
-  const [position,setPosition] = useState(0)
+const slides = [
+  { title: "Slide 1", text: "This is the first slide" },
+  { title: "Slide 2", text: "This is the second slide" },
+  { title: "Slide 3", text: "This is the third slide" },
+];
 
-  const isNextDisabled = position === slides.length-1
-  const isPrevDisabled = position === 0
-
+function App() {
   return (
-  <div className='slider'>
-  <div id="navigation" className="text-center">
-  <button data-testid="button-restart" className="small outlined" disabled={isPrevDisabled} onClick={()=>{
-    setPosition(0)
-  }}>Restart</button>
-  <button data-testid="button-prev" className="small" onClick={()=>{
-    setPosition(position -1)
-  }} disabled={isPrevDisabled}>Prev</button> <button
-  data-testid="button-next" className="small" onClick={()=>{
-    setPosition(position +1)
-  }} disabled={isNextDisabled}>Next</button> </div>
-  <div id="slide" className="card text-center">
-  <h1 data-testid="title">{slides[position].title}</h1>
-  <p data-testid="text">{slides[position].text}</p>
-  </div>
-  </div>
+    <div>
+      <Slides slides={slides} />
+    </div>
   );
-  
-  }
-  
-  export default Slides;
+}
+export default App;

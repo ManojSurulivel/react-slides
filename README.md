@@ -1,4 +1,4 @@
-### React-Slides (restart,prev,next)
+# React-Slides (restart,prev,next)
 
 # Explanation of Fixes:
 

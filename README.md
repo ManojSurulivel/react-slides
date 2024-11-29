@@ -1,6 +1,6 @@
 # React-Slides (restart,prev,next)
 
-# Explanation of Fixes:
+### Explanation of Fixes:
 
 Restart Button Disabled Condition:
 
